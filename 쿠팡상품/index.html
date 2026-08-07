@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALL KILL | 드림인네이처 친환경 농자재 전문 카달로그 쇼핑몰</title>
+  <meta name="description" content="드림인네이처 친환경 농자재, 비료, 영양제 카달로그. 닥터-K, 강타자, 칼라렉스, 브레이크, 슈퍼인칼 특가 세일">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts - Pretendard / Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Top Utility Navigation Bar -->
+  <div class="top-nav-bar">
+    <div class="top-nav-container">
+      <ul class="top-menu-list">
+        <li><a href="#" class="active">스페셜 이벤트</a></li>
+        <li><a href="#">스마일 쇼핑</a></li>
+        <li><a href="#">이슈 아이템</a></li>
+        <li><a href="#">득템 찬스</a></li>
+        <li><a href="#">추천 라이프</a></li>
+        <li><a href="#">제휴 이벤트</a></li>
+        <li><a href="#">추천 이벤트</a></li>
+      </ul>
+      <div class="top-contacts">
+        <span><i class="fa-solid fa-phone" style="color: var(--primary-red);"></i> 고객센터 054-841-4720</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Super Brand Day Dark Banner (Reference to user's sample image) -->
+  <div class="brand-banner">
+    <div class="banner-container">
+      <div class="banner-left">
+        <span class="banner-badge">SUPER BRAND DAY</span>
+        <div class="banner-title">
+          <span>MAX</span> 주말은 더 강력해진 할인 MAX! <strong>12% 결제할인</strong>
+        </div>
+      </div>
+      <button class="banner-btn" onclick="showToast('🎉 스페셜 할인 쿠폰이 적용되었습니다!')">
+        혜택 받기 <i class="fa-solid fa-chevron-right" style="font-size: 11px;"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 3. Main Header & Search -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" class="brand-logo">
+          ALL KILL<span class="tag">HOT</span>
+        </a>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="찾으시는 작물 영양제, 비료 이름을 검색해보세요 (예: 닥터-K, 강타자, 열과)">
+        <button class="search-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <div class="header-actions">
+        <button class="contact-btn-main" onclick="openOrderInquiry()">
+          <i class="fa-solid fa-headset"></i> 전화/견적 상담
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Category Filter Navigation -->
+  <nav class="category-nav">
+    <div class="category-container">
+      <button class="cat-pill active" data-cat="ALL">전체 보기</button>
+      <button class="cat-pill" data-cat="생육/회복">🌿 생육/회복 (닥터-K, 강타자)</button>
+      <button class="cat-pill" data-cat="착색/당도">🍎 착색/당도 (칼라렉스)</button>
+      <button class="cat-pill" data-cat="도장/억제">✂️ 도장/억제 (브레이크)</button>
+      <button class="cat-pill" data-cat="열과/방지">🛡️ 열과/방지 (슈퍼인칼, 밀반출)</button>
+      <button class="cat-pill" data-cat="미량요소">🧪 미량요소 (인칼)</button>
+    </div>
+  </nav>
+
+  <!-- 5. Main All Kill Product Showcase -->
+  <main class="main-content">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <h2 class="allkill-title">ALL KILL.</h2>
+        <span class="section-sub">드림인네이처 추천 최고 품질 친환경 영양제</span>
+      </div>
+      <div class="pagination-badge" id="productCount">7 / 7</div>
+    </div>
+
+    <!-- Product Card Grid -->
+    <div class="product-grid" id="productGrid">
+      <!-- Dynamically Rendered via app.js -->
+    </div>
+  </main>
+
+  <!-- 6. Product Detail Modal (상품 상세 설명서) -->
+  <div class="modal-overlay" id="detailModalOverlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body">
+        
+        <!-- Top Detail Grid -->
+        <div class="detail-top-grid">
+          <div class="detail-gallery">
+            <img src="" id="modalMainImg" class="main-detail-img" alt="상품 이미지">
+            <div class="detail-thumb-list" id="modalThumbList">
+              <!-- Thumbnails populated by JS -->
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="detail-badge-row">
+              <span class="detail-cat-tag" id="modalCatTag">생육/회복</span>
+              <span class="detail-brand-tag" id="modalBrandTag">드림인네이처</span>
+            </div>
+            <h3 class="detail-product-title" id="modalProductTitle">상품명</h3>
+            
+            <div class="detail-price-box">
+              <div class="detail-orig-price" id="modalOrigPrice">36,000원</div>
+              <div class="detail-final-price-row">
+                <span class="detail-discount" id="modalDiscount">30%</span>
+                <span class="detail-price-number" id="modalPriceNumber">24,900원</span>
+              </div>
+            </div>
+
+            <div class="detail-quick-specs">
+              <div class="spec-item">
+                <span class="spec-label">비료 구분</span>
+                <span class="spec-val" id="modalSpecType">미량요소 복합비료</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">내용량</span>
+                <span class="spec-val" id="modalSpecVolume">1,000cc</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">보증 성분</span>
+                <span class="spec-val" id="modalSpecGuarantee">수용성붕소 0.05%</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">적용 작물</span>
+                <span class="spec-val" id="modalSpecCrop">과수, 채소 등 전 작물</span>
+              </div>
+            </div>
+
+            <div class="detail-actions-row">
+              <button class="btn-inquire" onclick="openOrderInquiry()">
+                <i class="fa-solid fa-cart-shopping"></i> 구매 및 대량 주문 문의
+              </button>
+              <a href="tel:054-841-4720" class="btn-call">
+                <i class="fa-solid fa-phone"></i> 054-841-4720
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Tabs Section -->
+        <div class="detail-tabs-nav">
+          <button class="tab-btn active" data-tab="features" onclick="switchTab('features')">✨ 제품 특징 및 효과</button>
+          <button class="tab-btn" data-tab="usage" onclick="switchTab('usage')">🧪 희석 및 사용방법</button>
+          <button class="tab-btn" data-tab="precautions" onclick="switchTab('precautions')">⚠️ 주의사항</button>
+        </div>
+
+        <!-- Tab 1: Features -->
+        <div class="tab-pane active" id="tab-features">
+          <div class="features-list" id="modalFeaturesList">
+            <!-- Features populated by JS -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Usage & Interactive Dilution Calculator -->
+        <div class="tab-pane" id="tab-usage">
+          <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1e293b;">📋 표준 살포 가이드</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #334155;">
+              <li><strong>희석 배수:</strong> <span id="usageRatioText">500배 희석</span></li>
+              <li><strong>적용 작물:</strong> <span id="usageCropText">전 작물</span></li>
+              <li><strong>살포 시기:</strong> <span id="usageTimingText">전 생육기</span></li>
+              <li><strong>권장 방법:</strong> <span id="usageDetailText">물 20L당 40mL 희석 살포</span></li>
+            </ul>
+          </div>
+
+          <!-- Interactive Calculator for Farmers -->
+          <div class="calc-box">
+            <div class="calc-title">
+              <i class="fa-solid fa-calculator"></i> 농가 맞춤 희석량 자동 계산기
+            </div>
+            
+            <div style="font-size: 13px; color: #166534; margin-bottom: 12px;">
+              사용할 물의 양(L)을 입력하거나 아래 자주 쓰는 단위를 클릭하세요:
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap;">
+              <button style="background: #dcfce7; color: #15803d; border: 1px solid #86efac; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 700;" onclick="setWaterPreset(20)">물 1말 (20L)</button>
+              <button style="background: #dcfce7; color: #15803d; border: 1px solid #86efac; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 700;" onclick="setWaterPreset(100)">물 5말 (100L)</button>
+              <button style="background: #dcfce7; color: #15803d; border: 1px solid #86efac; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 700;" onclick="setWaterPreset(500)">약통 1통 (500L)</button>
+            </div>
+
+            <div class="calc-grid">
+              <div class="calc-input-group">
+                <label>물 용량 (L)</label>
+                <input type="number" id="calcWaterInput" value="20" min="1">
+              </div>
+              <div class="calc-input-group">
+                <label>희석 배수 (배)</label>
+                <input type="number" id="calcRatioInput" value="500" min="100">
+              </div>
+              <div class="calc-input-group">
+                <label>계산된 투입량</label>
+                <div style="padding: 8px 12px; background: #fff; border: 1px solid #86efac; border-radius: 6px; font-weight: 800; font-size: 15px; color: #15803d;">
+                  <span id="calcResultValue">40</span> mL
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              필요한 제품 투입량: <span id="calcResultValue">40</span> mL
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Precautions -->
+        <div class="tab-pane" id="tab-precautions">
+          <ul id="precautionsList" style="padding-left: 20px;">
+            <!-- Precautions populated by JS -->
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Order / Inquiry Form Modal -->
+  <div class="modal-overlay" id="orderModalOverlay">
+    <div class="modal-container" style="max-width: 500px;">
+      <button class="modal-close-btn" id="orderCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body">
+        <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 6px;">구매 및 상담 신청</h3>
+        <p style="font-size: 13px; color: #64748b; margin-bottom: 20px;">연락처를 남겨주시면 대표 농자재 전문가가 바로 안내해 드립니다.</p>
+
+        <form onsubmit="submitOrderForm(event)">
+          <div class="form-group">
+            <label>선택한 상품</label>
+            <input type="text" id="orderProductName" readonly style="background: #f1f5f9; font-weight: 700;">
+          </div>
+          <div class="form-group">
+            <label>성함 / 농가명</label>
+            <input type="text" placeholder="예: 홍길동 (안동 사과농원)" required>
+          </div>
+          <div class="form-group">
+            <label>연락처</label>
+            <input type="tel" placeholder="010-0000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>재배 작물 및 문의사항</label>
+            <textarea rows="3" placeholder="예: 사과 2,000평 재배 중, 착색 및 열과 방지제 대량 문의합니다."></textarea>
+          </div>
+          <button type="submit" class="btn-submit-form">
+            상담 신청하기
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- 8. Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">드림인네이처</div>
+        <ul class="footer-links">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">제품 카달로그</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <p><strong>드림인네이처</strong> | 대표자: 드림 | 사업자등록번호: 000-00-00000 | 생산업등록번호: 경북안동 44-가-10804호</p>
+        <p>주소: 경상북도 안동시 친환경 농자재 센터 | 고객상담실: 054-841-4720 | 팩스: 054-000-0000</p>
+        <p>본 사이트의 제품 카달로그 자료는 드림인네이처 공식 라벨 표기 기준에 의해 제작되었습니다.</p>
+      </div>
+
+      <div class="footer-bottom">
+        Copyright © Dream in Nature. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
