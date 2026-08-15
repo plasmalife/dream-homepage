@@ -2,189 +2,327 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>드림인네이처 - 친환경 특수비료</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Noto Sans KR',sans-serif;background:#f8f9fa;color:#222;}
-
-/* HEADER */
-header{background:#1a3a1a;color:#fff;padding:14px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3);}
+header{background:#1a3a1a;color:#fff;padding:14px 0;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.3);}
 .header-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
 .logo{font-size:22px;font-weight:900;letter-spacing:-1px;}
 .logo span{color:#8bc34a;}
 nav a{color:#ddd;text-decoration:none;margin-left:24px;font-size:14px;}
 nav a:hover{color:#8bc34a;}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,#1a3a1a 0%,#2e5e2e 60%,#4a7c4a 100%);color:#fff;text-align:center;padding:70px 20px 60px;}
-.hero h1{font-size:42px;font-weight:900;margin-bottom:12px;line-height:1.2;}
+.hero{background:linear-gradient(135deg,#1a3a1a 0%,#2e5e2e 60%,#4a7c4a 100%);color:#fff;text-align:center;padding:36px 20px 30px;}
+.hero h1{font-size:26px;font-weight:900;margin-bottom:8px;line-height:1.2;}
 .hero h1 span{color:#8bc34a;}
-.hero p{font-size:17px;color:#c8e6c9;margin-bottom:30px;}
-.hero-btn{display:inline-block;background:#8bc34a;color:#1a3a1a;font-weight:700;padding:14px 36px;border-radius:30px;text-decoration:none;font-size:16px;transition:.2s;}
+.hero p{font-size:13px;color:#c8e6c9;margin-bottom:18px;}
+.hero-btn{display:inline-block;background:#8bc34a;color:#1a3a1a;font-weight:700;padding:10px 26px;border-radius:30px;text-decoration:none;font-size:14px;transition:.2s;}
 .hero-btn:hover{background:#aed581;transform:translateY(-2px);}
-
-/* SECTION TITLE */
-.sec-title{text-align:center;padding:50px 20px 30px;}
-.sec-title h2{font-size:28px;font-weight:800;color:#1a3a1a;margin-bottom:8px;}
-.sec-title p{color:#666;font-size:15px;}
-
-/* PRODUCT GRID */
-.products{max-width:1100px;margin:0 auto;padding:0 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
-.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.08);transition:.2s;}
+.sec-title{text-align:center;padding:46px 20px 28px;}
+.sec-title h2{font-size:26px;font-weight:800;color:#1a3a1a;margin-bottom:6px;}
+.sec-title p{color:#666;font-size:14px;}
+.products{max-width:1100px;margin:0 auto;padding:0 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.08);transition:.2s;display:flex;flex-direction:column;}
 .card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.14);}
-.card-img{width:100%;height:220px;object-fit:cover;display:block;background:#f0f4f0;}
-.card-body{padding:20px;}
-.card-tag{display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;}
-.card-title{font-size:20px;font-weight:800;color:#1a3a1a;margin-bottom:6px;}
-.card-sub{font-size:13px;color:#4caf50;font-weight:600;margin-bottom:8px;}
-.card-desc{font-size:14px;color:#555;line-height:1.6;margin-bottom:14px;}
-.card-features{list-style:none;padding:0;}
-.card-features li{font-size:13px;color:#444;padding:4px 0;border-top:1px solid #f0f0f0;}
+.ci{width:100%;height:200px;object-fit:cover;display:block;background:#f0f4f0;}
+.ci-contain{width:100%;height:200px;object-fit:contain;display:block;background:#f0f4f0;padding:8px;}
+.card-body{padding:18px;display:flex;flex-direction:column;flex:1;}
+.card-tag{display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+.card-title{font-size:19px;font-weight:800;color:#1a3a1a;margin-bottom:4px;}
+.card-sub{font-size:12px;color:#4caf50;font-weight:600;margin-bottom:8px;}
+.card-desc{font-size:13px;color:#555;line-height:1.5;margin-bottom:14px;flex:1;}
+.card-features{list-style:none;padding:0;margin-bottom:8px;}
+.card-features li{font-size:13px;color:#444;padding:3px 0;border-top:1px solid #f0f0f0;}
 .card-features li::before{content:"✓ ";color:#4caf50;font-weight:700;}
-.card-vol{display:inline-block;margin-top:14px;background:#1a3a1a;color:#8bc34a;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;}
-
-/* BRAND SECTION */
-.brand{background:#1a3a1a;color:#fff;text-align:center;padding:50px 20px;}
-.brand h2{font-size:26px;font-weight:800;margin-bottom:12px;}
-.brand p{color:#c8e6c9;font-size:15px;max-width:600px;margin:0 auto 24px;}
-.brand-badges{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
-.badge{background:rgba(255,255,255,.1);border:1px solid rgba(139,195,74,.4);border-radius:12px;padding:16px 24px;font-size:14px;font-weight:600;color:#c8e6c9;}
-.badge strong{display:block;font-size:18px;color:#8bc34a;margin-bottom:4px;}
-
-/* FOOTER */
-footer{background:#111;color:#888;text-align:center;padding:24px;font-size:13px;}
+.detail-btn{display:block;width:100%;background:#1a3a1a;color:#8bc34a;font-size:13px;font-weight:700;padding:10px;border-radius:10px;border:none;cursor:pointer;transition:.2s;margin-top:auto;}
+.detail-btn:hover{background:#2e5e2e;}
+.brand{background:#1a3a1a;color:#fff;text-align:center;padding:46px 20px;}
+.brand h2{font-size:24px;font-weight:800;margin-bottom:10px;}
+.brand p{color:#c8e6c9;font-size:14px;max-width:600px;margin:0 auto 20px;}
+.brand-badges{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.badge{background:rgba(255,255,255,.1);border:1px solid rgba(139,195,74,.4);border-radius:12px;padding:14px 20px;font-size:13px;font-weight:600;color:#c8e6c9;}
+.badge strong{display:block;font-size:16px;color:#8bc34a;margin-bottom:4px;}
+footer{background:#111;color:#888;text-align:center;padding:22px;font-size:13px;}
 footer span{color:#aaa;}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.active{display:flex;}
+.modal-box{background:#fff;border-radius:20px;max-width:900px;width:100%;max-height:90vh;overflow-y:auto;position:relative;}
+.mclose{position:sticky;top:10px;float:right;margin:12px 12px 0 0;background:#1a3a1a;color:#fff;border:none;border-radius:50%;width:34px;height:34px;font-size:16px;cursor:pointer;z-index:10;}
+.modal-inner{display:flex;gap:0;padding:24px;}
+.modal-left{flex:0 0 320px;max-width:320px;}
+.modal-img{width:100%;border-radius:12px;object-fit:contain;background:#f0f4f0;height:260px;}
+.di-imgs{display:flex;gap:8px;margin-top:10px;}
+.di-imgs img{flex:1;height:90px;object-fit:cover;border-radius:8px;}
+.modal-right{flex:1;padding-left:24px;}
+.modal-title{font-size:26px;font-weight:900;color:#1a3a1a;margin:8px 0 4px;}
+.modal-sub{font-size:13px;color:#4caf50;font-weight:600;margin-bottom:14px;}
+.ds{background:#f0f8f0;border-left:4px solid #4caf50;border-radius:0 8px 8px 0;padding:14px;margin-top:14px;}
+.ds h4{font-size:14px;font-weight:800;color:#1a3a1a;margin-bottom:8px;}
+.ds p{font-size:13px;color:#555;line-height:1.7;}
+@media(max-width:640px){.modal-inner{flex-direction:column;padding:16px;}.modal-left{max-width:100%;}.modal-right{padding-left:0;padding-top:16px;}.modal-img{height:200px;}}
 </style>
 </head>
 <body>
-
 <header>
   <div class="header-inner">
     <div class="logo">드림인<span>네이처</span></div>
-    <nav>
-      <a href="#products">상품소개</a>
-      <a href="#brand">브랜드</a>
-    </nav>
+    <nav><a href="#products">상품소개</a><a href="#brand">브랜드</a></nav>
   </div>
 </header>
-
 <section class="hero">
   <h1>자연이 만든 힘,<br><span>드림인네이처</span></h1>
   <p>친환경 특수비료로 작물의 생육·결실·품질을 과학적으로 관리합니다.</p>
   <a href="#products" class="hero-btn">상품 보기 ↓</a>
 </section>
-
 <div class="sec-title" id="products">
   <h2>🌱 제품 라인업</h2>
   <p>백두대간 그린마인 참여기업 | 친환경특수비료제조업체</p>
 </div>
-
 <div class="products">
+<div class='card'>
+  <img class='ci ci-contain' src='images/slide1_img10.jpg' alt='닥터-K'>
+  <div class='card-body'>
+    <span class='card-tag'>아미노산 첨가</span>
+    <div class='card-title'>닥터-K</div>
+    <div class='card-sub'>DOCTOR-K · 1,000cc</div>
+    <div class='card-desc'>아미노산이 첨가된 생육안정·품질 관리 전문 비료</div>
+    <button class='detail-btn' onclick='openModal("modal-doctor-k")'>상세 설명 보기 →</button>
+  </div>
+</div>
 
-  <!-- 닥터-K -->
-  <div class="card">
-    <img class="card-img" src="images/slide1_img10.jpg" alt="닥터-K">
-    <div class="card-body">
-      <span class="card-tag">아미노산 첨가</span>
-      <div class="card-title">닥터-K</div>
-      <div class="card-sub">DOCTOR-K · 1,000cc</div>
-      <div class="card-desc">아미노산이 첨가된 생육안정·품질 관리 전문 비료입니다.</div>
-      <ul class="card-features">
-        <li>생육 정상화 및 회복</li>
-        <li>개화·결실·과질 관리</li>
-        <li>과실 품질 향상</li>
-      </ul>
-      <span class="card-vol">내용량 1,000cc</span>
+<div class='card'>
+  <img class='ci ci-contain' src='images/slide2_img0.png' alt='브레이크'>
+  <div class='card-body'>
+    <span class='card-tag'>고농도 인산·칼륨</span>
+    <div class='card-title'>브레이크</div>
+    <div class='card-sub'>친환경 특수비료 · 1L</div>
+    <div class='card-desc'>고농도 인산과 칼륨의 조합으로 작물의 균형 있는 생육 관리</div>
+    <button class='detail-btn' onclick='openModal("modal-brake")'>상세 설명 보기 →</button>
+  </div>
+</div>
+
+<div class='card'>
+  <img class='ci ci-contain' src='images/milban_1.jpg' alt='밀반열과 고두탄'>
+  <div class='card-body'>
+    <span class='card-tag'>수용성 칼슘 17%↑</span>
+    <div class='card-title'>밀반열과 고두탄</div>
+    <div class='card-sub'>고농도 특수 액상칼슘 · 500cc</div>
+    <div class='card-desc'>천연 유기칼슘을 액상화하여 Bio-water와 혼합한 수용성 칼슘 비료</div>
+    <button class='detail-btn' onclick='openModal("modal-calcium")'>상세 설명 보기 →</button>
+  </div>
+</div>
+
+<div class='card'>
+  <img class='ci ci-contain' src='images/slide4_img0.png' alt='슈퍼인칼'>
+  <div class='card-body'>
+    <span class='card-tag'>꽃눈분화·결실 관리</span>
+    <div class='card-title'>슈퍼인칼</div>
+    <div class='card-sub'>무질소 인산칼슘제 · 1L</div>
+    <div class='card-desc'>인산칼슘과 필수 미량요소를 함유, 과실의 색깔과 당도 향상</div>
+    <button class='detail-btn' onclick='openModal("modal-super-incal")'>상세 설명 보기 →</button>
+  </div>
+</div>
+
+<div class='card'>
+  <img class='ci' src='images/slide5_img0.png' alt='인칼'>
+  <div class='card-body'>
+    <span class='card-tag'>무질소 인산 결실제</span>
+    <div class='card-title'>인칼</div>
+    <div class='card-sub'>꽃과 열매에 집중하는 시기</div>
+    <div class='card-desc'>필수 인산을 중심으로 생육 균형부터 결실·품질·저장성 관리</div>
+    <button class='detail-btn' onclick='openModal("modal-incal")'>상세 설명 보기 →</button>
+  </div>
+</div>
+
+<div class='card'>
+  <img class='ci' src='images/slide6_img0.png' alt='칼라렉스'>
+  <div class='card-body'>
+    <span class='card-tag'>착색·당도·수세 관리</span>
+    <div class='card-title'>칼라렉스</div>
+    <div class='card-sub'>COLOR-LEX · 1L</div>
+    <div class='card-desc'>인산·가리 화합물과 식물성 아미노산 18종으로 착색과 당도 향상에 특화</div>
+    <button class='detail-btn' onclick='openModal("modal-colorlex")'>상세 설명 보기 →</button>
+  </div>
+</div>
+
+<div class='card'>
+  <img class='ci ci-contain' src='images/gangtaja_1.jpg' alt='강타자'>
+  <div class='card-body'>
+    <span class='card-tag'>냉해·고온기 스트레스 관리</span>
+    <div class='card-title'>강타자</div>
+    <div class='card-sub'>미량요소 복합비료 · 500mL</div>
+    <div class='card-desc'>노르웨이산 해조추출물 기반, 냉해 예방과 생육 밸런스 향상</div>
+    <button class='detail-btn' onclick='openModal("modal-gangtaja")'>상세 설명 보기 →</button>
+  </div>
+</div>
+
+<div class='card'>
+  <img class='ci ci-contain' src='images/bullocho_pptx_1.png' alt='불로초'>
+  <div class='card-body'>
+    <span class='card-tag'>광합성 증진·미네랄</span>
+    <div class='card-title'>불로초</div>
+    <div class='card-sub'>미네랄 / 최고급 작물 영양제 · 500mL</div>
+    <div class='card-desc'>광합성·엽록소·미량요소 흡수를 한번에 관리하는 신개념 솔루션</div>
+    <button class='detail-btn' onclick='openModal("modal-bullocho")'>상세 설명 보기 →</button>
+  </div>
+</div>
+</div>
+
+<div class='modal-overlay' id='modal-doctor-k' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-doctor-k"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/slide1_img10.jpg' alt='닥터-K'>
+      
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>아미노산 첨가</span>
+      <h2 class='modal-title'>닥터-K</h2>
+      <p class='modal-sub'>DOCTOR-K · 1,000cc</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>생육 정상화 및 회복</li><li>개화·결실·과질 관리</li><li>과실 품질 향상</li></ul>
+      <div class='ds'><h4>닥터-K 란?</h4><p>식물의 영양결핍으로 인한 장해를 해결하고 고소득을 목표로 암모늄, 아미노산에 식물생육의 필수원소들을 결합한 최고급 비료입니다.</p></div><div class='ds'><h4>효능 및 특성</h4><p>▶ 잎의 노화방지, 수세회복, 각종장해 회복, 비대, 개화, 결실을 촉진시킵니다.</p><p>▶ 생육이 왕성하여 발근 발아가 촉진되며 건전한 나무형태를 만들고, 크고 당도가 높으며 맛, 향, 색택이 선명한 고품질로 수확이 얻어집니다.</p><p>▶ 건묘육성, 생장촉진, 품질향상, 수확증대를 증진시키는 필수 고급 비료입니다.</p><p>▶ 작물의 냉해를 예방하고 화방에 도움을 주고 꽃대를 크게 만드는데 도움을 줍니다.</p><p>▶ 아미노산을 첨가한 아미노산성 종합 특수 액상 비료입니다.</p></div><div class='ds'><h4>주의사항</h4><p>▶ 사용농도 및 사용량은 식물의 생육상태에 따라 조정하십시오.</p><p>▶ 동제, 기계유, 석회유황합제와 혼용을 금하며 피해를 고려하여 희석배수를 강하게 하여 사용하십시오.</p><p>▶ 재배하우스나 온실, 일반 노지의 기온이 고온기(30℃) 때에는 주의하여 사용하십시오.</p><p>▶ 아미노산의 함량이 높아 아미노산의 일부가 석출되어 침전물이 생길 수 있으나 효능에는 차이가 없으므로 잘 흔들어 사용하십시오.</p><p>▶ 사용 후 남은 원액은 밀봉하여 서늘한 곳에 보관하십시오.</p></div>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- 브레이크 -->
-  <div class="card">
-    <img class="card-img" src="images/slide2_img0.png" alt="브레이크">
-    <div class="card-body">
-      <span class="card-tag">고농도 인산·칼륨</span>
-      <div class="card-title">브레이크</div>
-      <div class="card-sub">친환경 특수비료 · 1L</div>
-      <div class="card-desc">고농도 인산과 칼륨의 조합으로 작물의 균형 있는 생육 관리에 활용합니다.</div>
-      <ul class="card-features">
-        <li>고품질 인산·칼륨 조합</li>
-        <li>생육 균형과 과실 관리</li>
-        <li>빠른 흡수와 이용</li>
-      </ul>
-      <span class="card-vol">내용량 1L</span>
+<div class='modal-overlay' id='modal-brake' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-brake"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/slide2_img0.png' alt='브레이크'>
+      
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>고농도 인산·칼륨</span>
+      <h2 class='modal-title'>브레이크</h2>
+      <p class='modal-sub'>친환경 특수비료 · 1L</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>고품질 인산·칼륨 조합</li><li>생육 균형과 과실 관리</li><li>빠른 흡수와 이용</li></ul>
+      <p style='color:#888;font-size:14px;'>상세 설명이 준비 중입니다.</p>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- 밀반열과 고두탄 -->
-  <div class="card">
-    <img class="card-img" src="images/slide3_img0.png" alt="밀반열과 고두탄">
-    <div class="card-body">
-      <span class="card-tag">수용성 칼슘 17%↑</span>
-      <div class="card-title">밀반열과 고두탄</div>
-      <div class="card-sub">고농도 특수 액상칼슘 · 500cc</div>
-      <div class="card-desc">천연 유기칼슘을 액상화하여 Bio-water와 혼합한 수용성 칼슘 비료입니다.</div>
-      <ul class="card-features">
-        <li>고농도 특수 액상칼슘</li>
-        <li>빠른 흡수를 고려한 설계</li>
-        <li>다양한 작물에 적용</li>
-      </ul>
-      <span class="card-vol">내용량 500cc</span>
+<div class='modal-overlay' id='modal-calcium' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-calcium"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/milban_1.jpg' alt='밀반열과 고두탄'>
+      <div class='di-imgs'><img src='images/milban_2.jpg' alt='밀반2'><img src='images/milban_3.jpg' alt='밀반3'></div>
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>수용성 칼슘 17%↑</span>
+      <h2 class='modal-title'>밀반열과 고두탄</h2>
+      <p class='modal-sub'>고농도 특수 액상칼슘 · 500cc</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>고농도 특수 액상칼슘</li><li>빠른 흡수를 고려한 설계</li><li>다양한 작물에 적용</li></ul>
+      <div class='ds'><h4>제품 특징</h4><p>천연 유기칼슘을 액상화하여 Bio-water와 혼합한 수용성 칼슘 비료입니다.</p><p>수용성 칼슘 함량 17% 이상으로 작물의 칼슘 결핍을 빠르게 해소합니다.</p><p>밀반(密斑)열과 고두탄(苦頭炭) 예방에 효과적입니다.</p></div>
+      <div class='ds'><h4>사용 방법</h4><p>• 희석 배수: 400~1,000배 희석</p><p>• 사용 시기: 생육 전반 / 결실기 집중 사용</p><p>• 사용 간격: 7~10일 간격</p></div>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- 슈퍼인칼 -->
-  <div class="card">
-    <img class="card-img" src="images/slide4_img0.png" alt="슈퍼인칼">
-    <div class="card-body">
-      <span class="card-tag">꽃눈분화·결실 관리</span>
-      <div class="card-title">슈퍼인칼</div>
-      <div class="card-sub">무질소 인산칼슘제 · 1L</div>
-      <div class="card-desc">인산칼슘과 필수 미량요소를 함유, 과실의 색깔과 당도 향상에 활용합니다.</div>
-      <ul class="card-features">
-        <li>꽃눈분화·결실 관리</li>
-        <li>과실 품질(색깔·당도) 향상</li>
-        <li>신선도와 저장성 관리</li>
-      </ul>
-      <span class="card-vol">내용량 1L</span>
+<div class='modal-overlay' id='modal-super-incal' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-super-incal"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/slide4_img0.png' alt='슈퍼인칼'>
+      
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>꽃눈분화·결실 관리</span>
+      <h2 class='modal-title'>슈퍼인칼</h2>
+      <p class='modal-sub'>무질소 인산칼슘제 · 1L</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>꽃눈분화·결실 관리</li><li>과실 품질(색깔·당도) 향상</li><li>신선도와 저장성 관리</li></ul>
+      <p style='color:#888;font-size:14px;'>상세 설명이 준비 중입니다.</p>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- 인칼 -->
-  <div class="card">
-    <img class="card-img" src="images/slide5_img0.png" alt="인칼">
-    <div class="card-body">
-      <span class="card-tag">무질소 인산 결실제</span>
-      <div class="card-title">인칼</div>
-      <div class="card-sub">꽃과 열매에 집중하는 시기</div>
-      <div class="card-desc">필수 인산을 중심으로 생육 균형부터 결실·품질·저장성 관리까지 도와줍니다.</div>
-      <ul class="card-features">
-        <li>생육 균형 관리</li>
-        <li>꽃눈·결실 관리</li>
-        <li>과실 품질·저장성</li>
-      </ul>
-      <span class="card-vol">봉소 0.05% · 몰리브덴 0.0005%</span>
+<div class='modal-overlay' id='modal-incal' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-incal"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/slide5_img0.png' alt='인칼'>
+      
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>무질소 인산 결실제</span>
+      <h2 class='modal-title'>인칼</h2>
+      <p class='modal-sub'>꽃과 열매에 집중하는 시기</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>생육 균형 관리</li><li>꽃눈·결실 관리</li><li>과실 품질·저장성</li></ul>
+      <p style='color:#888;font-size:14px;'>상세 설명이 준비 중입니다.</p>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- 칼라렉스 -->
-  <div class="card">
-    <img class="card-img" src="images/slide6_img0.png" alt="칼라렉스">
-    <div class="card-body">
-      <span class="card-tag">착색·당도·수세 관리</span>
-      <div class="card-title">칼라렉스</div>
-      <div class="card-sub">COLOR-LEX · 1L</div>
-      <div class="card-desc">인산·가리 화합물과 식물성 아미노산 18종으로 착색과 당도 향상에 특화된 미량요소 복합비료입니다.</div>
-      <ul class="card-features">
-        <li>과실 착색 관리</li>
-        <li>당도 증가 촉진</li>
-        <li>숙기 촉진</li>
-      </ul>
-      <span class="card-vol">내용량 1L</span>
+<div class='modal-overlay' id='modal-colorlex' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-colorlex"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/slide6_img0.png' alt='칼라렉스'>
+      
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>착색·당도·수세 관리</span>
+      <h2 class='modal-title'>칼라렉스</h2>
+      <p class='modal-sub'>COLOR-LEX · 1L</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>과실 착색 관리</li><li>당도 증가 촉진</li><li>숙기 촉진</li></ul>
+      <p style='color:#888;font-size:14px;'>상세 설명이 준비 중입니다.</p>
     </div>
   </div>
+</div>
+</div>
 
+<div class='modal-overlay' id='modal-gangtaja' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-gangtaja"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/gangtaja_1.jpg' alt='강타자'>
+      <div class="di-imgs"><img src="images/gangtaja_1.jpg" alt="강타자1"><img src="images/gangtaja_2.jpg" alt="강타자2"><img src="images/gangtaja_3.jpg" alt="강타자3"></div>
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>냉해·고온기 스트레스 관리</span>
+      <h2 class='modal-title'>강타자</h2>
+      <p class='modal-sub'>미량요소 복합비료 · 500mL</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>냉해 예방 관리</li><li>고온기 스트레스 관리</li><li>생육·품질 관리</li></ul>
+      <div class='ds'><h4>제품 특징</h4><p>• 최고급 노르웨이산 해조추출물과 기능성 원료를 조합한 고농도 제품입니다.</p><p>• 작물이 흡수하기 쉬운 형태로 제조되어 흡수율이 좋으며 효과가 신속하게 나타납니다.</p><p>• 냉해 예방 및 고온기 스트레스 예방에 효과가 우수합니다.</p><p>• 알긴산, 베타인 및 다량의 아미노산은 작물에 신속하게 흡수되어 뿌리발달 및 생육증진에 도움을 줍니다.</p></div><div class='ds'><h4>사용 방법</h4><p>• 대상 작물: 전 작물</p><p>• 사용 시기: 생육 전반</p><p>• 사용 간격: 1~2주 간격</p><p>• 희석 배수: 500~1,000배 희석</p><p>• 물 20L 기준: 500배 = 40mL / 1,000배 = 20mL</p></div><div class='ds'><h4>제품 정보</h4><p>• 제품 구분: 미량요소 복합비료</p><p>• 내용량: 500mL</p><p>• 보증성분량: 붕소 0.05% · 몰리브덴 0.0005%</p><p>• 생산업등록번호: 경북안동 44-가-10804호</p><p>• 제조원: 드림인네이처</p><p>• 연락처: 054-841-4720</p></div><div class='ds'><h4>사용시 주의사항</h4><p>• 농약, 기계유, 석회유황합제, 석회보르도액, 강산성 제품과의 혼용을 삼가세요.</p><p>• 사용 농도와 사용 간격을 준수하고, 지나친 사용을 피하세요.</p><p>• 서늘한 곳에 보관하고 어린이의 손이 닿지 않도록 하세요.</p><p>• 제품을 먹지 마세요.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class='modal-overlay' id='modal-bullocho' onclick='closeModal(this)'>
+<div class='modal-box' onclick='event.stopPropagation()'>
+  <button class='mclose' onclick='closeModal(document.getElementById("modal-bullocho"))'>✕</button>
+  <div class='modal-inner'>
+    <div class='modal-left'>
+      <img class='modal-img' src='images/bullocho_pptx_1.png' alt='불로초'>
+    </div>
+    <div class='modal-right'>
+      <span class='card-tag'>광합성 증진·미네랄</span>
+      <h2 class='modal-title'>불로초</h2>
+      <p class='modal-sub'>미네랄 / 최고급 작물 영양제 · 500mL</p>
+      <ul class='card-features' style='margin-bottom:16px'><li>광합성·엽록소 증진</li><li>다수확·고품질 관리</li><li>저항성 증가</li></ul>
+      <div class='ds'><h4>불로초 란?</h4><p>광합성 증진의 신개념 제품으로 토양의 생명력을 깨우고 작물의 가치를 높이는 솔루션입니다.</p><p>광합성·엽록소·미량요소 흡수를 한번에 관리합니다.</p></div>
+      <div class='ds'><h4>효능 및 특성</h4><p>▶ 식물의 생존감각 인지제제 — 장마(침수), 염, 고온, 저온, 건조 스트레스 극복</p><p>▶ 광반응(Light Reaction) 최적화 — 빛 흡수·물의 광분해, ATP·NADPH 생성 촉진</p><p>▶ 엽록소 복원 및 밀도 증가 — ALA로 엽록소 합성 조절, 마그네슘·철·망간의 균형 공급</p><p>▶ 제품구성: 비바-클로립 · 광합성 촉진 · 엽록소 회복 · 미량요소 균형 공급</p></div>
+      <div class='ds'><h4>사용 방법</h4><p>• 오이·토마토·딸기 등 과채류: 전생육기, 7~10일 간격 관주처리, 400~500평당 2.5kg</p><p>• 사과·포도·복숭아 등 과수류: 착과 후~수확기, 7~10일 간격 관주처리, 300~400평당 2.5kg</p></div>
+      <div class='ds'><h4>주의사항</h4><p>• 고온 및 건조 시 사용 주의</p><p>• 타 농약과 혼용 시 주의</p><p>• 사용량 기준 준수</p></div>
+    </div>
+  </div>
+</div>
 </div>
 
 <section class="brand" id="brand">
@@ -197,11 +335,13 @@ footer span{color:#aaa;}
     <div class="badge"><strong>📋</strong>정부 지원 제품</div>
   </div>
 </section>
-
 <footer>
-  <span>드림인네이처 (Dream in Nature)</span> &nbsp;|&nbsp; 친환경특수비료제조업체 &nbsp;|&nbsp; 제조원: 드림인네이처<br>
+  <span>드림인네이처 (Dream in Nature)</span>&nbsp;|&nbsp;친환경특수비료제조업체&nbsp;|&nbsp;제조원: 드림인네이처<br>
   <span style="font-size:12px;margin-top:6px;display:block;">생산업등록번호: 경북안동 44-가-10804호</span>
 </footer>
-
+<script>
+function openModal(id){document.getElementById(id).classList.add('active');document.body.style.overflow='hidden';}
+function closeModal(el){el.classList.remove('active');document.body.style.overflow='';}
+</script>
 </body>
 </html>
